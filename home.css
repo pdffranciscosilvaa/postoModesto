@@ -1,0 +1,130 @@
+.home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+.welcome {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.welcome h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.welcome p {
+    font-size: 1.2em;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.btn-menu {
+    display: inline-block;
+    padding: 15px 40px;
+    background-color: #6d28d9;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-menu:hover {
+    background-color: #4c1d95;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.highlights {
+    padding: 40px 0;
+    background-color: #f8f8f8;
+    border-radius: 15px;
+    margin: 30px 0;
+}
+
+.highlights h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.highlights ul {
+    list-style: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.highlights li {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    color: #666;
+    text-align: center;
+}
+
+.opening-hours {
+    padding: 40px 0;
+    background-color: #fff;
+    border-radius: 15px;
+    margin: 30px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hours-content {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hours-content h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hours-content p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .home-container {
+        padding: 20px;
+    }
+    
+    .welcome h1 {
+        font-size: 2em;
+    }
+    
+    .welcome p {
+        font-size: 1em;
+    }
+    
+    .highlights h2 {
+        font-size: 1.8em;
+    }
+    
+    .highlights ul {
+        padding: 0 20px;
+    }
+}

@@ -1,30 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assests/icon.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-    <script src="classe.js" defer></script>
-    <script src="main.js" defer></script>
-    <title>Posto Modesto</title>
+    <link rel="icon" href="./assests/modesto.jpg" type="image/jpg">
+    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="home.css">
+    <script src="script.js" defer></script>
+    <title>Posto Modesto - Início</title>
 </head>
-
 <body>
-    <div id="background"></div>
-    <ul>
-        <li><a href="index.html">Início</a></li>
-        <li>Serviços</li>
-        <li>Ajuda</li>
-        <li><a href="account.html">Conta</a></li>
-        <li>Sobre Nós</li>
-        <li><img src="./assests/fuel-icon.png" alt="Ícone de Combustível"></li>
-    </ul>
     <header>
-        <img src="./assests/gas-station-logo.png" alt="Logo Posto de Gasolina">
-        <h1>Posto Modesto</h1>
+        <div id="background"></div>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
     </header>
-</body>
 
+    <main class="home-container">
+        <section class="welcome">
+            <div class="welcome-content">
+                <img src="./assests/modesto.jpg" alt="Posto Modesto" class="logo">
+                <h1>Bem-vindo ao Posto Modesto</h1>
+                <p>Seu posto de confiança e qualidade</p>
+                <a href="cardapio.html" class="btn-menu">Ver Cardápio</a>
+            </div>
+        </section>
+
+        <section class="highlights">
+            <div class="highlight-card">
+                <h2>Por que escolher nós?</h2>
+                <ul>
+                    <li>✓ Preços competitivos</li>
+                    <li>✓ Produtos de alta qualidade</li>
+                    <li>✓ Atendimento rápido e eficiente</li>
+                    <li>✓ Ambiente limpo e organizado</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="opening-hours">
+            <div class="hours-content">
+                <h2>Horário de Atendimento</h2>
+                <p>Segunda a Sábado: 06:00 às 22:00</p>
+                <p>Domingo: 07:00 às 21:00</p>
+                <p>Feriados: 08:00 às 20:00</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Posto de Gasolina Modesto. Todos os direitos reservados.</p>
+    </footer>
+</body>
 </html>

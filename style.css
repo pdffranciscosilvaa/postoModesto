@@ -1,6 +1,7 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -11,8 +12,10 @@ html {
 body {
   height: 100vh;
   width: 100vw;
+  background-color: #f4f4f4;
   background-repeat: no-repeat;
   background-size: 150vw 150vh;
+  color: #ffffff;
 }
 
 html::-webkit-scrollbar {
@@ -25,7 +28,49 @@ html::-webkit-scrollbar-thumb {
   border-radius: 25px;
 }
 
+nav {
+  background-color: #333;
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  padding: 10px 0;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 3px 0;
+}
+
 header {
+  background-image: url('./assests/modesto.jpg'); /* Verifique se o caminho da imagem está correto */
+  background-size: cover; /* Ajusta a imagem para cobrir todo o header */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita a repetição da imagem */
+  color: #fff;
+  text-align: center;
+  padding: 50px 0;
   font-family: 'Segoe UI';
   width: 100vw;
   height: 50vh;
@@ -51,6 +96,22 @@ header img {
   filter: brightness(.8);
   width: calc(100% + 300px);
   height: calc(50vh + 100px);
+}
+
+section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #333;
+  color: #fff;
 }
 
 ul {
@@ -86,7 +147,7 @@ ul li a:hover {
   background-image: linear-gradient(45deg, #ffffff10, #ffffff20);
 }
 
-ul li img{
+ul li img {
   height: auto;
   width: 35px;
   aspect-ratio: 1;
@@ -96,7 +157,7 @@ ul li img{
 #background {
   width: 100vw;
   height: 100vh;
-  background-image: url('./assests/menu2.png');
+  background-image: url('./assests/fundo.png');
   background-size: cover;
   position: fixed;
   background-repeat: no-repeat;
@@ -112,7 +173,7 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   background-color: #ff000070;
   border-radius: 10px;
   color: #fff;
@@ -128,7 +189,7 @@ h1 {
   color: #ddd;
 }
 
-#square input{
+#square input {
   margin-bottom: 10px;
 }
 
@@ -162,13 +223,14 @@ label {
   outline: none;
 }
 
-:is(input:focus~label, input:valid~label) {
+:is(input:focus ~ label, input:valid ~ label) {
   color: #ddd;
   font-size: 15px;
   top: -1.1rem;
 }
 
-.pass-box, .name-box {
+.pass-box,
+.name-box {
   position: relative;
   margin-block: 20px;
 }
@@ -188,4 +250,147 @@ form button {
 form button:hover {
   background-color: #bb0000;
   cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+
+  .cardapio {
+    display: flex;
+    flex-direction: column; /* Mantém os cards em uma coluna */
+    align-items: center; /* Centraliza os cards horizontalmente */
+    padding: 20px; /* Espaçamento ao redor do cardápio */
+    max-width: 600px; /* Limita a largura máxima */
+    margin: 0 auto; /* Centraliza o container */
+  }
+
+  .card {
+    width: 90%; /* Ocupa 90% da largura do container */
+    margin: 20px auto; /* Espaçamento entre os cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para destaque */
+  }
+
+  .image_container {
+    height: 200px; /* Ajusta a altura da imagem */
+  }
+
+  .image_container .image {
+    width: 100%; /* Ajusta a largura da imagem */
+    height: auto; /* Mantém a proporção */
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}
+.cardapio {
+  display: flex; /* Usar flexbox para alinhar os cards lado a lado */
+  flex-wrap: wrap; /* Permitir que os cards se movam para a próxima linha se não houver espaço */
+  justify-content: space-around; /* Espaçar os cards uniformemente */
+  padding: 20px; /* Adicionar um pouco de espaço ao redor do cardápio */
+}
+
+.card {
+  --bg-card: #27272a;
+  --primary: #6d28d9;
+  --primary-800: #4c1d95;
+  --primary-shadow: #2e1065;
+  --light: #d9d9d9;
+  --zinc-800: #18181b;
+  --bg-linear: linear-gradient(0deg, var(--primary) 50%, var(--light) 125%);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1rem;
+  width: 200px; /* Definir uma largura fixa para os cards */
+  background-color: var(--bg-card);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adicionar sombra para dar efeito de card */
+  margin: 10px; /* Adicionar margem entre os cards */
+  transition: transform 0.2s; /* Efeito de transição ao passar o mouse */
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center; /* Centraliza os cartões */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Aumentar o tamanho do card ao passar o mouse */
+}
+
+@media (max-width: 600px) {
+  .card {
+      width: 90%; /* Ajusta a largura para dispositivos pequenos */
+  }
+  /* Ocultando o 'sabor-select' */
+  .card p {
+      display: none; /* Esconde o parágrafo de sabor */
+  }
+}
+.card p {
+  display: none; /* Esconde o parágrafo de sabor */
+}
+
+.image_container {
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 150px; /* Definir uma altura fixa para a imagem */
+  background-color: var(--primary-800);
+  border-radius: 0.5rem;
+}
+
+.image_container .image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajustar a imagem para cobrir o container */
+}
+
+
+.mobile-menu {
+    cursor: pointer;
+    font-size: 24px;
+}
+.menu {
+    display: none; /* Inicia como invisível */
+    background-color: #444;
+    padding: 10px;
+}
+.menu.active {
+    display: block; /* Torna visível quando ativo */
+}
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+.menu li {
+    color: white;
+    padding: 10px 0;
+}
+
+.btn-menu {
+  display: inline-block;
+  padding: 15px 40px;
+  background-color: #6d28d9;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.2em;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-menu:hover {
+  background-color: #4c1d95;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
